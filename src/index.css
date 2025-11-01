@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default; /* Default cursor everywhere */
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0f172a;
+  color: #fff;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+code {
+  font-family: 'Courier New', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: #fff;
+}
+
+/* ========================================
+   CUSTOM CURSOR - CONSISTENT ACROSS SITE
+   ======================================== */
+
+/* Pointer cursor ONLY for clickable/interactive elements */
+a,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+select,
+label[for],
+summary,
+[role="button"],
+[tabindex]:not([tabindex="-1"]),
+.btn,
+.btn-primary,
+.btn-secondary,
+.project-link,
+.project-card,
+.social-link,
+.nav-link,
+.nav-toggle,
+.achievement-link,
+.github-link,
+.details-button,
+.overlay-button,
+.submit-btn,
+.resume-btn,
+.contact-method,
+.protocol-card,
+.competency-card,
+.skill-item,
+.achievement-card,
+.stat-card,
+.gallery-item,
+.filter-btn,
+.project-footer button,
+.hero-cta a {
+  cursor: pointer !important;
+}
+
+/* Text cursor for text input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+textarea,
+[contenteditable="true"] {
+  cursor: text !important;
+}
+
+/* Not-allowed cursor for disabled elements */
+:disabled,
+[disabled],
+[aria-disabled="true"] {
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}
+
+/* Move cursor for draggable elements */
+[draggable="true"] {
+  cursor: move !important;
+}
+
+/* Help cursor for elements with tooltips */
+abbr[title],
+dfn[title] {
+  cursor: help !important;
+}
+
+/* Ensure hover states maintain proper cursors */
+p,
+h1, h2, h3, h4, h5, h6,
+span,
+div,
+section,
+article,
+nav,
+header,
+footer,
+main {
+  cursor: default;
+}
+
+/* Override any conflicting cursor styles */
+* {
+  cursor: inherit;
+}
+
+/* Restore pointer for interactive elements on hover */
+a:hover,
+button:hover,
+.btn:hover,
+.social-link:hover,
+.nav-link:hover {
+  cursor: pointer !important;
+}
+
