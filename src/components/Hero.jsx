@@ -108,7 +108,7 @@ const Hero = () => {
             ))}
           </motion.div>
         </motion.div>
-
+        
         <motion.div 
           className="hero-visual"
           initial={{ opacity: 0, scale: 0.8 }}
