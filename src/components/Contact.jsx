@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTelegram, FaEnvelope, FaFileDownload, FaPhone } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload, FaPhone } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -22,19 +23,37 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate form submission
-    setFormStatus('Message sent! I\'ll get back to you soon.');
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setFormStatus('');
-    }, 3000);
+    setFormStatus('Sending...');
+
+    // EmailJS configuration
+    const serviceID = 'service_kyzb05d';
+    const templateID = 'template_yibuqf9';
+    const publicKey = 'zyKajwMPgnqhytvmz';
+
+    // Send email using EmailJS
+    emailjs.send(serviceID, templateID, formData, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setFormStatus('✅ Message sent successfully! I\'ll get back to you soon.');
+        setTimeout(() => {
+          setFormData({ name: '', email: '', subject: '', message: '' });
+          setFormStatus('');
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error('FAILED...', error);
+        setFormStatus('❌ Failed to send message. Please try again or email me directly.');
+        setTimeout(() => {
+          setFormStatus('');
+        }, 5000);
+      });
   };
 
   const contactInfo = [
     {
       icon: <FaEnvelope />,
       label: 'Email',
-      value: 'your.email@example.com',
+      value: 'sparshtrivedi05@gmail.com',
       link: 'mailto:your.email@example.com'
     },
     {
@@ -47,13 +66,7 @@ const Contact = () => {
       icon: <FaLinkedin />,
       label: 'LinkedIn',
       value: 'Connect with me',
-      link: '#'
-    },
-    {
-      icon: <FaTelegram />,
-      label: 'Telegram',
-      value: '@sparsh_embedded',
-      link: '#'
+      link: 'https://www.linkedin.com/in/sparsh-trivedi-553427211'
     }
   ];
 
@@ -122,7 +135,7 @@ const Contact = () => {
                 <FaFileDownload />
                 Download Resume
               </a>
-              <p className="resume-note">Full project details, BOM, and power analysis included</p>
+              <p className="resume-note">add something here</p>
             </motion.div>
           </motion.div>
 

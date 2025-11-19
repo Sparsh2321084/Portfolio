@@ -1,7 +1,7 @@
 export const projectsData = [
   {
     id: 1,
-    title: "IoT Environmental Monitoring System",
+    title: "Smart Storage Grain System",
     subtitle: "Real-time sensor network with cloud integration",
     description: "Modular IoT system for environmental monitoring using ESP32 with multiple sensors. Features real-time data logging, cloud integration, and mobile alerts for critical conditions.",
     longDescription: "A field-ready environmental monitoring system capable of tracking temperature, humidity, air quality, and light levels. The system uses MQTT for reliable communication and implements power-efficient sleep modes for extended battery operation.",
@@ -15,9 +15,9 @@ export const projectsData = [
       "OTA firmware updates"
     ],
     problemSolved: "Traditional monitoring systems were expensive and inflexible. This solution provides a cost-effective, modular platform that can be deployed in harsh field conditions with minimal maintenance.",
-    image: "/projects/iot-system.jpg",
-    schematic: "/projects/iot-schematic.png",
-    video: "/projects/iot-demo.mp4",
+    image: "https://via.placeholder.com/800x600/4A90E2/ffffff?text=IoT+System",
+    schematic: "https://via.placeholder.com/1200x800/34495e/ffffff?text=Schematic",
+    video: null,
     github: "https://github.com/Sparsh2321084/iot-monitoring",
     bom: [
       { component: "ESP32-DevKitC", quantity: 1, cost: "$8.00" },
@@ -50,9 +50,9 @@ export const projectsData = [
       "Lithium polymer battery with protection circuit"
     ],
     problemSolved: "Existing line following robots lacked precision and speed. This implementation uses STM32's advanced timers and DMA for microsecond-level control, resulting in smooth, fast navigation.",
-    image: "/projects/robot.jpg",
-    schematic: "/projects/robot-schematic.png",
-    video: "/projects/robot-demo.mp4",
+    image: "https://via.placeholder.com/800x600/E74C3C/ffffff?text=Robot",
+    schematic: "https://via.placeholder.com/1200x800/34495e/ffffff?text=Schematic",
+    video: null,
     github: "https://github.com/Sparsh2321084/line-robot",
     bom: [
       { component: "STM32F411CEU6", quantity: 1, cost: "$5.50" },
@@ -84,9 +84,9 @@ export const projectsData = [
       "Secure local-first architecture"
     ],
     problemSolved: "Commercial smart home solutions require cloud connectivity and subscriptions. This local-first approach ensures privacy, reliability, and zero recurring costs.",
-    image: "/projects/smart-home.jpg",
-    schematic: "/projects/smart-home-architecture.png",
-    video: "/projects/smart-home-demo.mp4",
+    image: "https://via.placeholder.com/800x600/27AE60/ffffff?text=Smart+Home",
+    schematic: "https://via.placeholder.com/1200x800/34495e/ffffff?text=Architecture",
+    video: null,
     github: "https://github.com/Sparsh2321084/smart-home-hub",
     bom: [
       { component: "Raspberry Pi 4 (4GB)", quantity: 1, cost: "$55.00" },
@@ -256,42 +256,42 @@ export const galleryData = [
     id: 1,
     title: "Custom ESP32 PCB - Top View",
     category: "pcb",
-    image: "/gallery/pcb-top.jpg",
+    image: "https://via.placeholder.com/600x400/4A90E2/ffffff?text=PCB+Top",
     description: "4-layer PCB with optimized power distribution"
   },
   {
     id: 2,
     title: "Custom ESP32 PCB - Bottom View",
     category: "pcb",
-    image: "/gallery/pcb-bottom.jpg",
+    image: "https://via.placeholder.com/600x400/4A90E2/ffffff?text=PCB+Bottom",
     description: "Ground plane and signal routing"
   },
   {
     id: 3,
     title: "IoT System Schematic",
     category: "schematic",
-    image: "/gallery/schematic-1.png",
+    image: "https://via.placeholder.com/600x400/34495e/ffffff?text=Schematic",
     description: "Complete system architecture and connections"
   },
   {
     id: 4,
     title: "Logic Analyzer Trace",
     category: "debug",
-    image: "/gallery/logic-trace.png",
+    image: "https://via.placeholder.com/600x400/E74C3C/ffffff?text=Logic+Trace",
     description: "I2C communication timing analysis"
   },
   {
     id: 5,
     title: "Robot Assembly",
     category: "assembly",
-    image: "/gallery/robot-assembly.jpg",
+    image: "https://via.placeholder.com/600x400/27AE60/ffffff?text=Assembly",
     description: "Complete robot with sensors and motors"
   },
   {
     id: 6,
     title: "3D Printed Enclosure",
     category: "cad",
-    image: "/gallery/enclosure.jpg",
+    image: "https://via.placeholder.com/600x400/9B59B6/ffffff?text=3D+Enclosure",
     description: "Custom enclosure designed in Fusion 360"
   }
 ];

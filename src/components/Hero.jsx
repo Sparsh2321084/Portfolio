@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTelegram, FaFileDownload } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
   const socialLinks = [
     { icon: <FaGithub />, url: 'https://github.com/Sparsh2321084', label: 'GitHub' },
-    { icon: <FaLinkedin />, url: '#', label: 'LinkedIn' },
-    { icon: <FaTelegram />, url: '#', label: 'Telegram' }
+    { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/sparsh-trivedi-553427211', label: 'LinkedIn' }
   ];
 
   return (
@@ -34,7 +33,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            Hi, I'm <span className="gradient-text">Sparsh</span>
+            Hi, I'm <span className="gradient-text">Sparsh Trivedi</span>
           </motion.h1>
 
           <motion.h2 
@@ -79,8 +78,8 @@ const Hero = () => {
             <a href="#projects" className="btn btn-primary">
               View My Work
             </a>
-            <a href="/resume.pdf" download className="btn btn-secondary">
-              <FaFileDownload /> Download Resume
+            <a href="#contact" className="btn btn-secondary">
+              <FaFileDownload /> Get in Touch
             </a>
           </motion.div>
 
@@ -119,8 +118,8 @@ const Hero = () => {
             {/* ADD YOUR PHOTO HERE: Save as /public/profile.jpg */}
             <div className="profile-photo">
               <img 
-                src="/profile.jpg" 
-                alt="Sparsh - Embedded Systems Engineer"
+                src="/profile.JPG" 
+                alt="Sparsh - Electrical and Electronics Engineer"
                 onError={(e) => {
                   // Fallback if image not found - shows initials
                   e.target.style.display = 'none';
@@ -136,9 +135,6 @@ const Hero = () => {
               <div className="decoration-circle circle-2"></div>
               <div className="decoration-circle circle-3"></div>
             </div>
-            <div className="floating-chip chip-1">ESP32</div>
-            <div className="floating-chip chip-2">STM32</div>
-            <div className="floating-chip chip-3">RPi</div>
           </div>
         </motion.div>
       </div>

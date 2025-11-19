@@ -55,7 +55,7 @@ const Navbar = () => {
             scrollToSection('home');
           }}
         >
-          <span className="logo-text">Sparsh</span>
+          <span className="logo-text">Sparsh's Portfolio</span>
           <span className="logo-dot">.</span>
         </a>
 
